@@ -1,0 +1,7 @@
+version: "0.1.0"
+pre_ci_boot:
+    image: index.alauda.cn/library/python
+    tag: "2"
+ci:
+    - python generate_files.py
+    - cp text_* $ALAUDACI_UPLOAD_DIR
